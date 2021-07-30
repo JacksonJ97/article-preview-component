@@ -16,6 +16,17 @@ function toggleDisplay() {
     articleFooter.style.display = "flex";
     shareContainer.style.display = "none";
   }
+
+  if (document.body.clientWidth > 1199) {
+    shareContainer.style.display = "none";
+    articleFooter.style.display = "flex";
+
+    if (desktopShareContainer.style.display === "none") {
+      desktopShareContainer.style.display = "block";
+    } else if (desktopShareContainer.style.display === "block") {
+      desktopShareContainer.style.display = "none";
+    }
+  }
 }
 
 window.addEventListener("resize", function () {
@@ -33,18 +44,6 @@ window.addEventListener("resize", function () {
 
 shareBtn.addEventListener("click", function () {
   toggleDisplay();
-
-  if (document.body.clientWidth > 1199) {
-    shareContainer.style.display = "none";
-    articleFooter.style.display = "flex";
-
-    if (desktopShareContainer.style.display === "none") {
-      desktopShareContainer.style.display = "block";
-    } else if (desktopShareContainer.style.display === "block") {
-      console.log(2);
-      desktopShareContainer.style.display = "none";
-    }
-  }
 });
 
 darkShareBtn.addEventListener("click", function () {
