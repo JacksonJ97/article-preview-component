@@ -94,6 +94,10 @@ body {
   background-color: hsl(212, 23%, 69%);
 }
 
+.desktop-share-container {
+  display: none;
+}
+
 .share-container {
   display: none;
   background-color: hsl(217, 19%, 35%);
@@ -149,6 +153,7 @@ body {
 
   .wrapper {
     width: 55%;
+    position: relative;
   }
 
   .article-content {
@@ -157,5 +162,25 @@ body {
 
   .article-footer {
     justify-content: flex-start;
+  }
+
+  .desktop-share-container {
+    position: absolute;
+    top: 50%;
+    right: -10.5%;
+    width: 240px;
+    padding: 1em;
+    background-color: hsl(217, 19%, 35%);
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+
+  .triangle {
+    position: absolute;
+    right: 40%;
+    width: 40px;
+    height: 25px;
+    background-color: hsl(217, 19%, 35%);
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
   }
 }
