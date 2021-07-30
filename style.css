@@ -33,6 +33,7 @@ body {
 
 .article-image {
   width: 100%;
+  height: 100%;
   border-radius: 12px 12px 0 0;
 }
 
@@ -89,6 +90,10 @@ body {
   cursor: pointer;
 }
 
+.share-btn:hover {
+  background-color: hsl(212, 23%, 69%);
+}
+
 .share-container {
   display: none;
   background-color: hsl(217, 19%, 35%);
@@ -121,4 +126,36 @@ body {
   padding: 0.75em;
   background-color: hsl(214, 17%, 51%);
   cursor: pointer;
+}
+
+.dark-share-btn:hover {
+  background-color: hsl(212, 23%, 69%);
+}
+
+@media (min-width: 1200px) {
+  .article-card {
+    display: flex;
+    max-width: 800px;
+  }
+
+  .image-container {
+    width: 45%;
+    max-height: 300px;
+  }
+
+  .article-image {
+    border-radius: 12px 0 0 12px;
+  }
+
+  .wrapper {
+    width: 55%;
+  }
+
+  .article-content {
+    margin-top: 3em;
+  }
+
+  .article-footer {
+    justify-content: flex-start;
+  }
 }
